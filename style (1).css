@@ -1,0 +1,354 @@
+/* ================================
+   STYLE.CSS — Aditya Prasad
+   Simple Resume Website
+   ================================ */
+
+/* 1. CSS Variables - Color Palette */
+:root {
+  --primary: #1a3557;
+  --accent: #2f80ed;
+  --bg: #ffffff;
+  --grey-bg: #f4f6f9;
+  --text: #222222;
+  --muted: #555555;
+  --border: #dddddd;
+  --font: 'Poppins', sans-serif;
+}
+
+/* 2. Base / Element Selectors */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background-color: var(--bg);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+p {
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 3. Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 4. Navigation Bar - Flexbox */
+#navbar {
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* 5. Hero Section */
+#hero {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+#hero p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+/* Class Selector - Button */
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.65rem 1.8rem;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+/* 6. Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.grey-bg {
+  background-color: var(--grey-bg);
+}
+
+/* 7. About Section - Flexbox */
+.about-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Class Selector */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.about-text p {
+  margin-bottom: 0.7rem;
+}
+
+.info-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-list li {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* 8. Education Cards */
+.edu-card {
+  background: white;
+  border-left: 4px solid var(--accent);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+}
+
+.grey-bg .edu-card {
+  background: white;
+}
+
+.year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.institute {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+/* 9. Skills - Flexbox */
+.skills-flex {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  flex: 1;
+  min-width: 200px;
+  background: var(--grey-bg);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+}
+
+.skill-box h3 {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.skill-box ul {
+  list-style: disc;
+  padding-left: 1.1rem;
+}
+
+.skill-box ul li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+/* 10. Projects */
+.project-card {
+  background: white;
+  border-left: 4px solid var(--primary);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+}
+
+.project-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* 11. Certifications - Two Column Flexbox */
+.two-col {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.two-col > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.two-col h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.simple-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+}
+
+.simple-list li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+/* 12. Contact */
+.contact-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-list li {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* 13. Footer - ID Selector */
+#footer {
+  background-color: var(--primary);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+}
+
+/* 14. Responsive */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-flex,
+  .two-col {
+    flex-direction: column;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+}
